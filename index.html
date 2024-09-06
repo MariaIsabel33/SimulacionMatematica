@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimMath</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0 auto;
+            padding: 0 20px;
+            max-width: 1200px;
+            text-align: center;
+            background-color: #f4f4f9; /* Fondo suave */
+        }
+
+        h1, h3 {
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        h3 {
+            color: #666;
+        }
+
+        p img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transition: background-color 0.3s;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd; /* Resalta la fila cuando se pasa el ratón */
+        }
+
+        canvas, #graficoErrores {
+            margin: 20px auto;
+        }
+
+        #graficoErrores {
+            max-width: 900px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Simulación de errores con Ecuación Matemática</h1>
+    <h3>Presentado por: Maria Isabel Diaz Meneses - Código: 2216611</h3>
+    
+    <p><img src="ecuacion.png" alt="Ecuación Matemática"></p>
+
+    <button onclick="procesar()">Procesar</button>
+
+    <h3>Resultados</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Error</th>
+                <th>Totales</th>
+                <th>Porcentaje</th>
+            </tr>
+        </thead>
+        <tbody id="tablaResultados">
+            <tr>
+                <td>Total de errores de arcoseno</td>
+                <td id="totalArcoseno">0</td>
+                <td id="porcentajeArcoseno">0%</td>
+            </tr>
+            <tr>
+                <td>Total de errores de arcocoseno</td> <!-- Corregí el error tipográfico aquí -->
+                <td id="totalArcocos">0</td>
+                <td id="porcentajeArcocos">0%</td>
+            </tr>            
+            <tr>
+                <td>Total de errores de raíz cuadrada</td>
+                <td id="totalRaizCuadrada">0</td>
+                <td id="porcentajeRaizCuadrada">0%</td>
+            </tr>
+            <tr>
+                <td>Total de errores de división</td>
+                <td id="totalDivision">0</td>
+                <td id="porcentajeDivision">0%</td>
+            </tr>
+            <tr>
+                <td>Total de errores de logaritmo natural</td>
+                <td id="totalLogaritmo">0</td>
+                <td id="porcentajeLogaritmo">0%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="graficoErrores"></div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
